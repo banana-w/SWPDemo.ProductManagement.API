@@ -1,0 +1,6 @@
+@SWP.ProductManagement.API_HostAddress = http://localhost:5255
+
+GET {{SWP.ProductManagement.API_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
