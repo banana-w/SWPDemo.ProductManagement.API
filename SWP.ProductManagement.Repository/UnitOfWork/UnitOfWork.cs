@@ -15,6 +15,7 @@ namespace SWP.ProductManagement.Repository.UnitOfWork
         private GenericRepository<Category> _categoryRepo;
         private GenericRepository<Product> _productRepo;
         private GenericRepository<Order> _orderRepo;
+        private GenericRepository<OrderDetail> _orderDetailRepo;
 
 
         public UnitOfWork(ProductDbContext context)
@@ -86,6 +87,18 @@ namespace SWP.ProductManagement.Repository.UnitOfWork
                     this._orderRepo = new GenericRepository<Order>(_context);
                 }
                 return _orderRepo;
+            }
+        }
+
+        public GenericRepository<OrderDetail> OrderDetailRepository
+        {
+            get
+            {
+                if (_orderDetailRepo == null)
+                {
+                    this._orderDetailRepo = new GenericRepository<OrderDetail>(_context);
+                }
+                return _orderDetailRepo;
             }
         }
     }

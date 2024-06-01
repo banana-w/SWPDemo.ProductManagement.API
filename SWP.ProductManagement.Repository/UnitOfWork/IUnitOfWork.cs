@@ -15,5 +15,6 @@ namespace SWP.ProductManagement.Repository.UnitOfWork
         public GenericRepository<Category> CategoryRepository { get; }
         public GenericRepository<Product> ProductRepository { get; }
         public GenericRepository<Order> OrderRepository { get; }
+        public GenericRepository<OrderDetail> OrderDetailRepository { get; }
     }
 }
